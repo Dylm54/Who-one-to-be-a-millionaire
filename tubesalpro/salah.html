@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body style="background-color:#020245 ;">
+    <div style="display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    ">
+        <h2 style="color: #F1D171;
+    font-family: 'Silkscreen',sans-serif;
+    text-shadow: 4px 3px grey;
+    margin-bottom: 100px;
+    font-size: 50px;">Daftar soal yang paling banyak benar</h2>
+        <div style="background: dimgray;
+        background: dimgray;
+        width: 600px;
+        padding: 30px;
+        border-radius: 10px;
+        color: white;
+        font-family: 'Silkscreen';
+        font-size: 25px;
+        ">
+            <ul style="font-size: 20px;">
+                {{ range .}}
+                <li>{{ .Name }} <br> Salah: {{ .PFalse }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        <form action="/admin" method="get">
+            <input type="submit" value="Kembali" style="
+            width: 100px;
+            height: 40px;
+            border-radius: 7px;
+            border: none;
+            background: #6c757d;
+            color: white;
+            font-size: 13px;
+            font-family: 'Silkscreen',sans-serif;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 50px;
+        ">
+        </form>
+    </div>
+</body>
+
+</html>

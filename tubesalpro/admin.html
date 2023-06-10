@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <title>Who One to Be a Millionaire - Admin</title>
+</head>
+
+<body style="background: #020245" >
+    <div style="   display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #F1D171 ; 
+    font-family: 'Silkscreen', sans-serif;
+    text-shadow: 4px 3px grey;
+    ">
+        <h1 style=" font-size: 70px;">Admin</h1>
+    </div>
+    <div style="
+        display:flex; 
+        color : white;
+        justify-content:center
+
+        ">
+        <div style=" font-family: 'Ubuntu Mono', sans-serif; margin-right: 100px;">
+
+            <h1 style="font-family: 'Silkscreen', sans-serif;color: #F1D171;  ">Bank soal dan Jawaban:</h1>
+                <ul  style="   background: dimgray;
+                width: 600px;
+                padding: 50px;
+                border-radius: 10px;">
+                    {{ range .}}
+                    <li style="font-family: 'Silkscreen', sans-serif ; font-size: 20px;" >{{ .Name }}</li>
+                    <p style="font-size: 20px">a. {{ .Jwba }}</p>
+                    <p style="font-size: 20px">b. {{ .Jwbb }}</p>
+                    <p style="font-size: 20px">c. {{ .Jwbc }}</p>
+                    <p style="font-size: 20px">d. {{ .Jwbd }}</p>
+                    <p style="font-size: 20px">Kunci Jawaban: {{ .Kunci }}</p>
+                    <p style="font-size: 20px; background: #F1D171;
+                    width: fit-content;
+                    padding: 10px;
+                    padding-right: 15px;
+                    border-radius: 7px;
+                    color: black;">Unique Key: {{ .Unique }}</p>
+                    {{ end }}
+                </ul>
+        </div>
+        <div style=" display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 85px;
+        ">
+            <form action="/edit" method="get" style="margin-bottom:20px ;">
+                <input type="submit" value="Ubah" style="
+                height: 40px;
+                width: 250px;
+                border-radius: 7px;
+                border: none;
+                background: #ffc107;
+                color: black;
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: bold;
+                font-family: 'Silkscreen',sans-serif;
+              ">
+            </form>
+            <form action="/add" method="get" style="margin-bottom:20px ;">
+                <input type="submit" value="Tambah" style="
+                height: 40px;
+                width: 250px;
+                border-radius: 7px;
+                border: none;
+                background: #ffc107;
+                color: black;
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: bold;
+                font-family: 'Silkscreen',sans-serif;
+              ">
+            </form>
+            <form action="/hapus" method="get" style="margin-bottom:20px ;">
+                <input type="submit" value="Hapus" style="
+                height: 40px;
+                width: 250px;
+                border-radius: 7px;
+                border: none;
+                background: #ffc107;
+                color: black;
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: bold;
+                font-family: 'Silkscreen',sans-serif;
+              ">
+            </form>
+            <form action="/correct" method="get" style="margin-bottom:20px ;">
+                <input type="submit" value="Paling banyak benar" style="
+                height: 40px;
+                width: 250px;
+                border-radius: 7px;
+                border: none;
+                background: #ffc107;
+                color: black;
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: bold;
+                font-family: 'Silkscreen',sans-serif;
+              ">
+            </form>
+            <form action="/false" method="get" style="margin-bottom:20px ;">
+                <input type="submit" value="Paling banyak salah" style="
+                height: 40px;
+                border-radius: 7px;
+                border: none;
+                background: #ffc107;
+                width: 250px;
+                color: black;
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: bold;
+                font-family: 'Silkscreen',sans-serif;
+              ">
+            </form>
+            <form action="/index" method="get" style="margin-bottom:20px ;">
+                <input type="submit" value="Kembali" style="
+                height: 40px;
+                border-radius: 7px;
+                border: none;
+                width: 250px;
+                background: #6c757d;
+                color: white;
+                font-size: 13px;
+                font-family: 'Silkscreen',sans-serif;
+                cursor: pointer;
+                font-weight: bold;
+                
+            " >
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
